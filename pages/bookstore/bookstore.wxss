@@ -1,0 +1,165 @@
+/*header*/
+.container{
+  margin-bottom: 80rpx;
+}
+.header{
+  height: 120rpx;
+  padding: 20rpx;
+  background:#F4F3F4;
+  color: #fff;
+}
+
+.avatar image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius:50%;
+}
+.userIntro{
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+}
+.nickName{
+  font-size: 38rpx;
+  margin-bottom: 20rpx;
+  color: #000;
+}
+.desc{
+  color: #919191;
+  font-size: 26rpx;
+}
+.editInfo{
+  position: absolute;
+  right: 30rpx;
+  top: 30rpx;
+  width:35rpx;
+  height: 35rpx;
+}
+/*扫书或添加书*/
+.scanBook{
+  position: fixed;
+  right: 10rpx;
+  bottom: 10rpx;
+  width: 110rpx;
+  height: 110rpx;
+  z-index: 100;
+}
+
+.addBookOptions::before{
+  position: absolute;
+  content: '';
+  bottom: -18rpx;
+  right: 14rpx;
+  width: 0;
+  height: 0;
+  border-left: 20rpx solid transparent;
+  border-right: 20rpx solid transparent;
+  border-top: 20rpx solid #fff;
+}
+
+/*书架列表*/
+.bookList{
+  margin-top: 30rpx;
+  width: 100%;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:flex-start;
+}
+.bookItem{
+  width: 33.33%;
+  float: left;
+  position: relative;
+}
+
+.bookItem image{
+  width: 90%;
+  height: 300rpx;
+  box-shadow: 0px 0px 20rpx #ccc;
+}
+.groupImg{
+  height: 300rpx;
+  width: 90%;
+  background: #ccc;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin:0 auto;
+}
+
+.imgBox{
+  width: 45%;
+  height: 45%;
+}
+.imgBox image{
+  height: 100%;
+  width: 100%;
+}
+.bookTitle{
+  display: block;
+  width: 80%;
+  padding: 20rpx 10%;
+  font-size: 26rpx;
+}
+.checkbox{
+  position: absolute;
+  right: 15rpx;
+  top: 240rpx;
+}
+/*蒙版*/
+.cover{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, .4);
+  z-index: 100;
+}
+/*分组列表*/
+.bookAction{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 80%;
+  height: auto;
+  max-height: 700rpx;
+  background: #fff;
+  transform: translate(-50%,-50%);
+  overflow: scroll;
+  z-index: 1000;
+  border-radius: 10rpx;
+}
+.groupItem{
+  border-bottom:1px solid #e5e5e5;
+  padding: 30rpx 0;
+}
+.cancelBookAction{
+ padding: 35rpx 0;
+}
+
+/*书本操作*/
+.handleBook{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 100%;
+  background: #fff;
+  z-index: 1000;
+}
+.handleOption{
+  float: left;
+  width: 33.33%;
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.handleOption image{
+  width: 42rpx;
+  height: 42rpx;
+  margin-right: 10rpx;
+}

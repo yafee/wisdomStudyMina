@@ -1,0 +1,30 @@
+<!--pages/template/template.wxml-->
+<template name="activityInfo">
+    <view class="activityInfo">
+        <view class="activityFace">
+            <image src="../../imgs/q14.jpg" mode="scaleToFill"></image>
+            <text class="activityTitle">合肥「三体」3.3书迷会</text>
+        </view>
+        <view class="addressTime">
+            <view class="activityAddress">
+                <image src="../../imgs/dizhi.png"></image>
+                <text>合肥市泸州路33号</text> 
+            </view>
+            <view class="activityTime">
+                <image src="../../imgs/shijian.png"></image>
+                <text>2017年3月3日</text> 
+            </view>
+            <view class="joinPeople">
+                <view class="peopleAvatar">
+                    <image src="../../imgs/0.jpeg" mode="scaleToFill"></image>
+                    <image src="../../imgs/0.jpeg" mode="scaleToFill"></image>
+                    <image src="../../imgs/0.jpeg" mode="scaleToFill"></image>
+                    <image src="../../imgs/0.jpeg" mode="scaleToFill"></image>
+                    <image src="../../imgs/0.jpeg" mode="scaleToFill"></image>
+                </view>
+                <text>等46人已报名参加</text>
+            </view>
+        </view>
+    </view>
+</template>
+

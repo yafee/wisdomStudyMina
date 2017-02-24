@@ -1,0 +1,29 @@
+/* pages/signresult/signresult.wxss */
+.activityInfo{
+    padding: 20rpx 30rpx;
+    font-size: 30rpx;
+    text-align: left;
+    border-bottom: .1rem solid #e5e5e5;
+}
+.name{
+    color: #919191;
+}
+.resultIcon{
+    padding: 120rpx 0 30rpx;
+}
+.resultText{
+    font-size: 38rpx;
+    margin-bottom: 48rpx;
+}
+.successText{
+    color: #919191;
+    font-size: 30rpx;
+}
+.backIndex{
+    margin-top: 80rpx;
+    width: 90%;
+    color: #fff;
+    height: 88rpx;
+    background: #0b9fff;
+    font-size: 34rpx;
+}

@@ -1,0 +1,12 @@
+<!--pages/activitydtl/activitydtl.wxml-->
+<import src="../activityinfo/activityinfo.wxml"/>
+<template is="activityInfo"/>
+<view class="activityIntro">
+    <text class="activityIntroTitle">活动介绍</text>
+    <view class="introContent">
+        我要参加我要参加我要参加我要参加我要参加我要参加我要参加我要参加我要参加我要参加我要参加我要参加我要参加我要参加我要参加我要参加我要参加我要参加我要参加我要参加我
+    </view>
+</view>
+<view class="joinBtn text-center">
+    <navigator url="../sign/sign" open-type="navigate">我要参加</navigator> 
+</view>

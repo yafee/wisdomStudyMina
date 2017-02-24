@@ -1,0 +1,15 @@
+<!--pages/signresult/signresult.wxml-->
+<view class="text-center">
+   <view class='activityInfo'>
+        <text class="title">活动名称:</text>
+        <text class='name'>合肥「三体」3.3书迷会</text>
+   </view>
+    <icon type="success" size="140" class='block resultIcon'></icon>
+    <view class="text-center">
+        <text class="block resultText">报名成功</text>
+        <text class="successText">恭喜您已经成功参加活动！</text>
+    </view>
+    <navigator url="../bookstore/bookstore" open-type="switchTab">
+        <button class="backIndex">返回首页</button>
+    </navigator> 
+</view>

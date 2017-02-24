@@ -1,0 +1,17 @@
+<!--logs.wxml-->
+<import src="../activityinfo/activityinfo.wxml"/>
+<view class="containert">
+  <view class="header">
+    <view class="city">
+      <text>{{city}}</text>
+      <image src="../../imgs/xiala.png"></image>
+    </view>
+    <text>本市有{{activityTotal}}活动正在火热报名</text>
+  </view>
+  <navigator url="../activitydtl/activitydtl" open-type="redirect">
+    <template is="activityInfo"/>
+  </navigator>
+  <navigator url="../activitydtl/activitydtl" open-type="redirect">
+    <template is="activityInfo"/>
+  </navigator>
+</view>

@@ -1,0 +1,32 @@
+html{
+    font-size: 10px;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Microsoft Yahei', 'Luxi Sans', 'DejaVu Sans', Tahoma, 'Hiragino Sans GB', STHeiti, SimSun; 
+}
+.fl{
+    float: left;
+}
+.block{
+    display: block;
+}
+.inline-block{
+    display: inline-block;
+}
+.fullWidth{
+    width: 100%;
+}
+.text-left{
+    text-align: left;
+}
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+
+
+

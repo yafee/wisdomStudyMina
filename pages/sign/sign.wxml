@@ -1,0 +1,26 @@
+<!--pages/sign/sign.wxml-->
+<view class="container">
+    <view class='cell'>
+        <text class='cellTitle'>活动名称：</text>
+        <text class="cellContent">合肥「三体」33签售会</text> 
+    </view>
+    <view class='cell'>
+        <text class='cellTitle'>活动地址：</text>
+        <text class="cellContent">合肥市泸州路233号</text>         
+    </view>
+    <view class='cell activityTime'>
+        <text class='cellTitle'>活动时间：</text>
+        <text class="cellContent">2017年3月20日  </text> 
+    </view>
+    <view class="cell">
+        <text class='cellTitle'>报名人姓名：</text>
+        <text class="cellContent signName">赵亚飞</text>
+    </view>
+    <view class='cell'>
+        <text class='cellTitle'>报名人联系方式：</text>
+        <text class="cellContent signTel">18551664774</text> 
+    </view>
+    <navigator url="../signresult/signresult" open-type="redirect">
+        <button size="default" class="comfirmSign">确认报名</button>
+    </navigator> 
+</view>

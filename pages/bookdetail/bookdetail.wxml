@@ -1,0 +1,10 @@
+<!--pages/bookdetail/bookdetail.wxml-->
+<view class="baseInfo">
+    <view class="bookImg">
+        <image src="{{bookDetail.img}}"></image>
+    </view>
+    <view class="nameAuthor">
+        <text class="bookName">{{bookDetail.title}}</text>
+        <text class="bookAuthor block">{{bookDetail.author}}</text>
+    </view>
+</view>

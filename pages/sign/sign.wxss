@@ -1,0 +1,26 @@
+/* pages/sign/sign.wxss */
+.cell{
+    height: 88rpx;
+    line-height: 88rpx;
+    padding: 0 30rpx;
+    border-bottom:.1rem solid #e5e5e5;
+    font-size: 30rpx;
+}
+.cellContent{
+    color: #919191;
+}
+.activityTime{
+    border-bottom: 30rpx solid #f5f5f5;
+}
+.signName,.signTel{
+    display: block;
+    float: right;
+}
+.comfirmSign{
+    width: 90%;
+    background: #0b9fff;
+    margin-top: 115rpx;
+    height: 88rpx;
+    color: #fff;
+    font-size: 34rpx;
+}

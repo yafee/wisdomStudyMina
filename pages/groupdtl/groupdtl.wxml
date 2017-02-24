@@ -1,0 +1,37 @@
+<!--pages/groupdtl/groupdtl.wxml-->
+<view class="groupDtl">
+    <view class="groupTitle">
+        <text class="groupLabel">历史</text>
+        <text class="delBtn inline-block">删除分组</text>
+    </view>
+    <view class='bookList'>
+        <view wx:for="{{groupData.books}}" class="bookItem text-center"> 
+            <view bindlongtap='bookAction' bindtap="toDetail" data-book-id="{{item.id}}">
+                <image src="{{item.img}}" mode="scaleToFill"></image>
+                <text class='bookTitle'>{{item.title}}</text>
+                <checkbox hidden="{{hiddenCheckbox}}" bindtap='checkboxChange' data-book-id="{{item.id}}" class='checkbox'></checkbox>
+            </view>
+        </view>
+    </view>
+    <view class='handleBook text-center' hidden="{{hiddenHandleBook}}">
+        <view class='handleOption moveBook' bindtap="moveBook">
+        <image src="../../imgs/yidong.png"></image>
+        <text>移动</text>
+        </view>
+        <view class='handleOption deleteBook' bindtap="deleteBook">
+        <image src="../../imgs/shanchu.png"></image>
+        <text>删除</text>
+        </view>
+        <view class='handleOption cancelBook' bindtap="cancelHandleBook">
+        <image src="../../imgs/quxiao.png"></image>
+        <text>取消</text>
+        </view>
+    </view>
+    <view class='cover text-center' hidden='{{hiddenCover}}' bindtap="cancelCover"></view>
+    <view class='bookAction text-center' hidden="{{hiddenBookGroup}}">
+        <view wx:for="{{groups}}" class="groupItem">
+            <text>{{item}}</text>
+        </view>
+        <view class='cancelBookAction' bindtap='cancelBookAction'>取消</view>
+    </view>
+</view>

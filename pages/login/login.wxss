@@ -1,0 +1,46 @@
+/* pages/login/login.wxss */
+.container{
+    
+}
+.bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.logo{
+    margin: 200rpx 0; 
+}
+.logo image{
+    width: 147rpx;
+    height: 147rpx;
+}
+.appName{
+    color: #fff;
+    font-size: 30rpx;
+    margin-top: 15rpx;
+}
+.loginForm{
+    width: 80%;
+    margin: 0 auto;
+}
+.password,
+.mobile{
+    border: .1rem solid #46d991;
+    height: 90rpx;
+    border-radius: 10rpx;
+    margin-bottom: 28rpx;
+    font-size:30rpx;
+    text-indent: 30rpx;
+    background: rgba(255, 255, 255, .4);
+}
+.password{
+    margin-bottom: 40rpx;
+}
+.login{
+    background: #46d991;
+    color: #fff;
+    font-size: 34rpx;
+}

@@ -1,0 +1,60 @@
+<view class="container">
+  <view class="header">
+    <view class='avatar fl'>
+      <image src="{{userInfo.avatarUrl}}" mode="scaleToFill"></image>
+    </view>
+    <view class="userIntro">
+      <view>
+        <text class='nickName block'>{{userInfo.nickName}}的书房</text>
+        <text class="desc">{{userInfo.desc}}</text>
+      </view>
+    </view>
+    <navigator url="../storeinfo/storeinfo?nickName={{userInfo.nickName}}&avatarUrl={{userInfo.avatarUrl}}&desc={{userInfo.desc}}" open-type="navigate" >
+      <image src="../../imgs/bianji.png" class="editInfo"></image>
+    </navigator>
+  </view>
+  <image src="../../imgs/tianjia.png" class="scanBook" bindtap="scanBook"></image>
+  <view class="bookList">
+  <!--分组-->
+    <view wx:for="{{bookListId}}" wx:for-item="group" class="bookItem text-center" bindtap="toGroup" data-group="{{group}}">
+      <view class="groupImg">
+        <view class="inline-block imgBox" wx:for="{{group.books}}">
+          <image src="{{item.img}}"></image>
+        </view>
+      </view>
+      <text class='bookTitle'>{{group.name}}</text>
+    </view>
+    <!--未分组-->
+    <view wx:for="{{bookListNull}}" class="bookItem text-center"> 
+      <view bindlongtap='bookAction' bindtap="toDetail" data-book-detail="{{item}}">
+        <image src="{{item.img}}" mode="scaleToFill"></image>
+        <text class='bookTitle'>{{item.title}}</text>
+        <checkbox hidden="{{hiddenCheckbox}}" bindtap='checkboxChange' checked="{{checked}}" data-is-checked="{{checked}}" data-book-id="{{item.id}}" class='checkbox'></checkbox>
+      </view>
+    </view>
+  </view>
+  <view class='cover text-center' hidden='{{hiddenCover}}' bindtap="cancelCover"></view>
+  <view class='bookAction text-center' hidden="{{hiddenBookGroup}}">
+    <view wx:for="{{groups}}" class="groupItem">
+      <text>{{item}}</text>
+    </view>
+    <view class='cancelBookAction' bindtap='cancelBookAction'>取消</view>
+  </view>
+  <modal title="智慧书房管家" confirm-text="继续扫书" cancel-text="取消扫书" hidden="{{hiddenModal}}" bindconfirm="confirmModal" bindcancel="cancelModal">
+      {{modalText}}
+  </modal>
+  <view class='handleBook text-center' hidden="{{hiddenHandleBook}}">
+    <view class='handleOption moveBook' bindtap="moveBook">
+      <image src="../../imgs/yidong.png"></image>
+      <text>移动</text>
+    </view>
+    <view class='handleOption deleteBook' bindtap="deleteBook">
+      <image src="../../imgs/shanchu.png"></image>
+      <text>删除</text>
+    </view>
+    <view class='handleOption cancelBook' bindtap="cancelHandleBook">
+      <image src="../../imgs/quxiao.png"></image>
+      <text>取消</text>
+    </view>
+  </view>
+</view>
