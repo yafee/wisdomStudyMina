@@ -1,11 +1,11 @@
 <!--pages/groupdtl/groupdtl.wxml-->
 <view class="groupDtl">
     <view class="groupTitle">
-        <text class="groupLabel">历史</text>
-        <text class="delBtn inline-block">删除分组</text>
+        <text class="groupLabel">{{groupName}}</text>
+        <text class="delBtn inline-block" bindtap="deleteGroup">删除分组</text>
     </view>
     <view class='bookList'>
-        <view wx:for="{{groupData.books}}" class="bookItem text-center"> 
+        <view wx:for="{{groupData}}" class="bookItem text-center"> 
             <view bindlongtap='bookAction' bindtap="toDetail" data-book-id="{{item.id}}">
                 <image src="{{item.img}}" mode="scaleToFill"></image>
                 <text class='bookTitle'>{{item.title}}</text>
@@ -13,6 +13,18 @@
             </view>
         </view>
     </view>
+    <!--分组弹框-->
+    <view class='bookAction text-center' hidden="{{hiddenBookGroup}}">
+        <view wx:for="{{groups}}" class="groupItem">
+            <text data-group-id="{{item.id}}" bindtap="moveToGroup">{{item.name}}</text>
+        </view>
+        <view class="newGroup" bindtap="newGroup">新建分组</view>
+        <view class='cancelBookAction' bindtap='cancelBookAction'>取消</view>
+    </view>
+    <!--新建模态框-->
+    <modal title="新建分组" comfirm-text="确定" cancel="取消" hidden="{{hiddenNewGroup}}" bindconfirm="addToNewGroup" bindcancel="cancelNewGroup">
+        <input class="newGroupName" bindinput="getGroupName"/>
+    </modal>
     <view class='handleBook text-center' hidden="{{hiddenHandleBook}}">
         <view class='handleOption moveBook' bindtap="moveBook">
         <image src="../../imgs/yidong.png"></image>
@@ -28,10 +40,4 @@
         </view>
     </view>
     <view class='cover text-center' hidden='{{hiddenCover}}' bindtap="cancelCover"></view>
-    <view class='bookAction text-center' hidden="{{hiddenBookGroup}}">
-        <view wx:for="{{groups}}" class="groupItem">
-            <text>{{item}}</text>
-        </view>
-        <view class='cancelBookAction' bindtap='cancelBookAction'>取消</view>
-    </view>
 </view>

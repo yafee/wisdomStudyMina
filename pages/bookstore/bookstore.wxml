@@ -1,22 +1,23 @@
 <view class="container">
   <view class="header">
     <view class='avatar fl'>
-      <image src="{{userInfo.avatarUrl}}" mode="scaleToFill"></image>
+      <image src="{{userInfo.avatar}}" mode="scaleToFill"></image>
     </view>
     <view class="userIntro">
       <view>
-        <text class='nickName block'>{{userInfo.nickName}}的书房</text>
-        <text class="desc">{{userInfo.desc}}</text>
+        <text class='nickName block'>{{userInfo.bookshelf_name || userInfo.username}}</text>
+        <text class="desc">{{userInfo.description}}</text>
       </view>
     </view>
-    <navigator url="../storeinfo/storeinfo?nickName={{userInfo.nickName}}&avatarUrl={{userInfo.avatarUrl}}&desc={{userInfo.desc}}" open-type="navigate" >
+    <navigator url="../storeinfo/storeinfo?nickName={{userInfo.bookshelf_name || userInfo.username}}&avatar={{userInfo.avatar}}&description={{userInfo.description}}" open-type="navigate" >
       <image src="../../imgs/bianji.png" class="editInfo"></image>
     </navigator>
   </view>
-  <image src="../../imgs/tianjia.png" class="scanBook" bindtap="scanBook"></image>
+  <!--扫书按钮-->
+  <image src="../../imgs/tianjia.png" class="scanBook" bindtap="scanBook" animation="{{animation}}"></image>
   <view class="bookList">
-  <!--分组-->
-    <view wx:for="{{bookListId}}" wx:for-item="group" class="bookItem text-center" bindtap="toGroup" data-group="{{group}}">
+    <!--分组-->
+    <view wx:for="{{bookListId}}" wx:for-item="group" class="bookItem text-center" bindtap="toGroup" data-group-id="{{group.group_id}}" data-group-name="{{group.name}}">
       <view class="groupImg">
         <view class="inline-block imgBox" wx:for="{{group.books}}">
           <image src="{{item.img}}"></image>
@@ -34,15 +35,23 @@
     </view>
   </view>
   <view class='cover text-center' hidden='{{hiddenCover}}' bindtap="cancelCover"></view>
+  <!--分组弹框-->
   <view class='bookAction text-center' hidden="{{hiddenBookGroup}}">
-    <view wx:for="{{groups}}" class="groupItem">
-      <text>{{item}}</text>
+        <view wx:for="{{groups}}" class="groupItem">
+            <text data-group-id="{{item.id}}" bindtap="moveToGroup">{{item.name}}</text>
+        </view>
+        <view class="newGroup" bindtap="newGroup">新建分组</view>
+        <view class='cancelBookAction' bindtap='cancelBookAction'>取消</view>
     </view>
-    <view class='cancelBookAction' bindtap='cancelBookAction'>取消</view>
-  </view>
+  <!--新建模态框-->
+  <modal title="新建分组" comfirm-text="确定" cancel="取消" hidden="{{hiddenNewGroup}}" bindconfirm="addToNewGroup" bindcancel="cancelNewGroup">
+    <input class="newGroupName" bindinput="getGroupName"/>
+  </modal>
+  <!--已存在书架模态框-->
   <modal title="智慧书房管家" confirm-text="继续扫书" cancel-text="取消扫书" hidden="{{hiddenModal}}" bindconfirm="confirmModal" bindcancel="cancelModal">
       {{modalText}}
   </modal>
+  <!--删除，移动书本-->
   <view class='handleBook text-center' hidden="{{hiddenHandleBook}}">
     <view class='handleOption moveBook' bindtap="moveBook">
       <image src="../../imgs/yidong.png"></image>

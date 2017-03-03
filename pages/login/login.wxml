@@ -7,7 +7,11 @@
     </view>
     <view class="loginForm">
         <input class="mobile" placeholder="请输入您的手机号" placeholder-style="color:#000000" bindinput="getMobile"/>
-        <input class="password" placeholder="请输入您的密码" password="true" placeholder-style="color:#000000" bindinput="getPassword"/>
-        <button class="login" bindtap="login">登录</button>
+        <view class="password">
+            <input  placeholder="请输入您的密码" password="true" placeholder-style="color:#000000" bindinput="getCode"/>
+            <button bindtap="fetchCode" class="inline-block text-center" disabled="{{disabledCode}}">{{codeBtnVal}}</button>
+        </view>
+       
+        <button class="login" bindtap="bindMobile">绑定</button>
     </view>
 </view>

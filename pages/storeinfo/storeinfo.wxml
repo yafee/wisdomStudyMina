@@ -1,15 +1,15 @@
 <!--pages/storeinfo/storeinfo.wxml-->
 <view class="container text-center">
     <view class='avatar'>
-        <image src="{{storeInfo.avatarUrl}}" mode="scaleToFill"></image>
+        <image src="{{storeInfo.avatar}}" mode="scaleToFill"></image>
     </view>
     <view class='storeName text-left'>
         <label>书房名字</label>
-        <input value='{{storeInfo.nickName}}的书房' class=''/>
+        <input placeholder='{{storeInfo.nickName}}的书房' bindinput="getStorename"/>
     </view> 
     <view class='storeDesc text-left'>
         <label>书房简介</label>
-        <textarea value="{{storeInfo.desc}}"/>
+        <textarea placeholder="{{storeInfo.description}}" bindinput="getDesc"/>
     </view>
-    <button size="default" class="save block">保存</button>
+    <button size="default" class="save block" bindtap="saveStoreInfo">保存</button>
 </view>

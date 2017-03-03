@@ -28,16 +28,45 @@
 }
 .password,
 .mobile{
-    border: .1rem solid #46d991;
     height: 90rpx;
-    border-radius: 10rpx;
-    margin-bottom: 28rpx;
     font-size:30rpx;
+    margin-bottom: 28rpx;
+}
+.mobile{
+    border: .1rem solid #46d991;
+    border-radius: 10rpx;
     text-indent: 30rpx;
     background: rgba(255, 255, 255, .4);
 }
 .password{
     margin-bottom: 40rpx;
+    text-indent: 0rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.password input{
+    height: 90rpx;
+    width: 100%;
+    display: inline-block;
+    text-indent: 30rpx;
+    background: rgba(255, 255, 255, .4);
+    border: .1rem solid #46d991;
+    border-right: none;
+    border-top-left-radius:10rpx;
+    border-bottom-left-radius:10rpx;
+}
+.password button{
+    width: 40%;
+    background: #0b9fff;
+    height: 97rpx;
+    line-height: 97rpx;
+    color: #fff;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: inherit;
+    border-top-left-radius:0;
+    border-bottom-left-radius:0;
 }
 .login{
     background: #46d991;

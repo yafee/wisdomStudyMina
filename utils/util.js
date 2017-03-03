@@ -25,11 +25,11 @@ function cutString(str){
 
 function handleArr(checkedBooks,bookId){
   let index = checkedBooks.indexOf(bookId);
-  // console.log(index)
   if(index == -1){
     return checkedBooks.concat([bookId]);
   } else {
-    return checkedBooks.splice(index-1,1);
+    checkedBooks.splice(index,1);
+    return checkedBooks;
   }
 }
 

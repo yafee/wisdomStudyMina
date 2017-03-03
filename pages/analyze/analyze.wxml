@@ -1,0 +1,9 @@
+<!--pages/analyze/analyze.wxml-->
+<view class="container">
+    <view class="analyzeResult">
+        <!--<view class="analyzeChart">
+        </view>-->
+        <view class="userInfo">Nemo的体检报告</view>
+        <canvas canvas-id="analyzeChart" style="width:300px;height:300px;"/>
+    </view>
+</view>

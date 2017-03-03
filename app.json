@@ -1,16 +1,16 @@
 {
   "pages":[
     "pages/bookstore/bookstore",
+    "pages/analyze/analyze",
     "pages/activity/activity",
+    "pages/login/login",
     "pages/storeinfo/storeinfo",
     "pages/signresult/signresult",
     "pages/sign/sign",
     "pages/activitydtl/activitydtl",
     "pages/activityinfo/activityinfo",
-    "pages/login/login",
     "pages/bookdetail/bookdetail",
     "pages/groupdtl/groupdtl"
-    
   ],
   "tabBar": {
     "color":"##919191",
@@ -21,8 +21,12 @@
       "text": "书房",
       "iconPath": "imgs/shufanghui.png",
       "selectedIconPath": "imgs/shufanghl.png"
-    },
-    {
+    },{
+      "pagePath": "pages/analyze/analyze",
+      "text": "阅读体检",
+      "iconPath": "imgs/tijianhui.png",
+      "selectedIconPath": "imgs/tijianhl.png"
+    },{
       "pagePath": "pages/activity/activity",
       "text": "活动",
       "iconPath": "imgs/huodonghui.png",

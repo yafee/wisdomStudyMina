@@ -131,9 +131,14 @@
   z-index: 1000;
   border-radius: 10rpx;
 }
+.newGroup,
 .groupItem{
   border-bottom:1px solid #e5e5e5;
   padding: 30rpx 0;
+}
+.newGroupName{
+  border:1px solid #ccc;
+  border-radius: 6rpx;
 }
 .cancelBookAction{
  padding: 35rpx 0;
